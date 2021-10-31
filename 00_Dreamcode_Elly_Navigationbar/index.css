@@ -1,0 +1,113 @@
+:root {
+  --clr-bg-primary: rgba(49, 59, 75);
+  --clr-title-primary: rgb(180, 137, 59);
+  --clr-text-primary: #f0f4f5;
+  --clr-text-secondary: #f0f4f5d6;
+}
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  min-height: 100vh;
+  overflow: hidden;
+}
+a {
+  display: inline-block;
+  text-decoration: none;
+  color: var(--clr-text-secondary);
+}
+ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+nav {
+  padding: 0.5rem 2rem;
+  display: flex;
+  align-items: center;
+  background-color: var(--clr-bg-primary);
+}
+
+/* 1) logo */
+.logo {
+  display: flex;
+  align-items: center;
+  color: var(--clr-title-primary);
+}
+.fa-plane {
+  transform: rotate(-90deg);
+  font-size: 1.125rem;
+}
+h2 {
+  margin-left: 0.3em;
+  font-weight: bold;
+  color: var(--clr-text-primary);
+  cursor: pointer;
+}
+.fa-bars {
+  display: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: var(--clr-title-primary);
+}
+
+/* 2) Link Navigations */
+.link__container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+ul > li > a {
+  font-size: 1.125rem;
+  font-weight: bold;
+  padding: 1rem;
+}
+ul > li > a:hover {
+  background-color: var(--clr-title-primary);
+  border-radius: 1em;
+}
+
+/* 3) SNS container */
+.sns__container {
+  color: var(--clr-title-primary);
+}
+.fab {
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+.fab + .fab {
+  margin-left: 0.3em;
+}
+
+@media screen and (max-width: 768px) {
+  nav,
+  ul,
+  a,
+  .fa-bars,
+  .link__container {
+    display: block;
+  }
+
+  .fa-bars {
+    margin-left: auto;
+  }
+
+  ul {
+    margin-top: 1rem;
+  }
+  li {
+    text-align: center;
+  }
+  .sns__container {
+    display: flex;
+    justify-content: center;
+    margin: 1rem 0;
+    color: var(--clr-text-primary);
+  }
+}
